@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#2DD4BF" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="MoneyBridge" />
+    <meta name="description" content="A multilingual financial education app helping immigrants learn banking, credit, and more." />
+    
+    <title>MoneyBridge</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- PWA Manifest Placeholder (In a real deployment, this would be a separate file) -->
+    <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22MoneyBridge%22%2C%22short_name%22%3A%22MoneyBridge%22%2C%22start_url%22%3A%22%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23ffffff%22%2C%22theme_color%22%3A%22%232DD4BF%22%2C%22icons%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Fvia.placeholder.com%2F192%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fpng%22%7D%5D%7D" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        darkMode: 'class',
+        theme: {
+            extend: {
+                colors: {
+                    'brand-cyan': 'var(--color-brand-cyan)',
+                    'brand-cyan-dark': 'var(--color-brand-cyan-dark)',
+                    'brand-cyan-light': 'var(--color-brand-cyan-light)',
+                    'brand-dark': 'var(--color-brand-dark)',
+                    'accent-yellow': 'var(--color-accent-yellow)',
+                    'accent-yellow-dark': 'var(--color-accent-yellow-dark)',
+                },
+                fontFamily: {
+                    sans: ['Inter', 'sans-serif'],
+                },
+            }
+        }
+    }
+    </script>
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "@google/genai": "https://esm.run/@google/genai",
+        "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0"
+      }
+    }
+    </script>
+    <style>
+        :root, html[data-theme='default'] {
+            --color-brand-cyan: #2DD4BF;
+            --color-brand-cyan-dark: #0D9488;
+            --color-brand-cyan-light: #F0FDFA;
+            --color-brand-dark: #081C2A;
+            --color-accent-yellow: #FBBF24;
+            --color-accent-yellow-dark: #D97706;
+        }
+        html[data-theme='oceanic'] {
+            --color-brand-cyan: #38bdf8;
+            --color-brand-cyan-dark: #0284c7;
+            --color-brand-cyan-light: #f0f9ff;
+            --color-brand-dark: #0c2444;
+            --color-accent-yellow: #fde047;
+            --color-accent-yellow-dark: #facc15;
+        }
+        html[data-theme='sunset'] {
+            --color-brand-cyan: #fb923c;
+            --color-brand-cyan-dark: #ea580c;
+            --color-brand-cyan-light: #fff7ed;
+            --color-brand-dark: #431407;
+            --color-accent-yellow: #fca5a5;
+            --color-accent-yellow-dark: #ef4444;
+        }
+        html[data-theme='forest'] {
+            --color-brand-cyan: #4ade80;
+            --color-brand-cyan-dark: #16a34a;
+            --color-brand-cyan-light: #f0fdf4;
+            --color-brand-dark: #052e16;
+            --color-accent-yellow: #a3e635;
+            --color-accent-yellow-dark: #84cc16;
+        }
+
+        .dark .dark\:prose-invert {
+            --tw-prose-body: #d1d5db;
+        }
+        
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
